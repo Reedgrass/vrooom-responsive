@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vrooom — Barracuda X10</title>
@@ -18,105 +19,114 @@
 
     /* HERO SECTION */
     .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('assets/mercedes-vision-avtr.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('assets/mercedes-vision-avtr.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
     }
 
     /* Optional dark overlay for unifying text+video contrast */
     .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-    z-index: 0;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      z-index: 0;
     }
 
     /* Logo - slightly rotated, floating */
     .hero-logo {
-    position: absolute;
-    left: 2px;
-    width: 30%;
-    transform: rotate(-8deg);
-    z-index: 0;
+      position: absolute;
+      left: 2px;
+      width: 30%;
+      transform: rotate(-8deg);
+      z-index: 0;
     }
 
     .hero-logo img {
-    width: 100%;
+      width: 100%;
     }
 
     /* Rotated text box */
     .hero-text {
-    position: absolute;
-    bottom: 3%;
-    left: 5%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-left: 6px solid #f6e3b4;
-    border-radius: 10px;
-    backdrop-filter: blur(1px);
-    z-index: 0;
-    
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 6px solid #f6e3b4;
+      border-radius: 10px;
+      backdrop-filter: blur(1px);
+      z-index: 0;
+
     }
 
     .hero-text h1 {
-    font-size: 3em;
-    color: #a0fcf7;
-    margin-bottom: 10px;
+      font-size: 3em;
+      color: #a0fcf7;
+      margin-bottom: 10px;
     }
 
     .hero-text p {
-    font-size: 1.2em;
-    color: #fff;
+      font-size: 1.2em;
+      color: #fff;
     }
 
     /* Tilted video box */
     .hero-video {
-    position: absolute;
-    top: 180px;
-    right: 0px;
-    width: 40%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    z-index: 0;
-    border-radius: 5px;
-    overflow: hidden;
+      position: absolute;
+      bottom: 7%;
+      right: 7%;
+      width: 40%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+      z-index: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
     }
 
     .hero-video video {
-    width: 100%;
-    display: block;
-    border-radius: 2px;
+      width: 100%;
+      display: block;
+      border-radius: 2px;
     }
 
     /* CARD SECTION */
     .card-section {
-      
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      grid-template-rows: 1fr 1fr;
+      justify-content: wrap;
+      gap: 7%;
       padding: 50px 10%;
       background-color: #ffffff;
     }
 
     .top-card {
+      box-sizing: border-box;
       background: rgb(248, 240, 194);
       border: 1px solid #f97705;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
       padding: 20px;
       width: 280px;
       transition: transform 0.3s ease;
+
     }
-    
+
     .card {
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
       padding: 20px;
       width: 280px;
       transition: transform 0.3s ease;
@@ -126,10 +136,10 @@
       transform: translateY(10px);
       box-shadow: 0 12px 24px rgba(101, 247, 205, 0.1);
     }
-    
+
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
 
     .card h3 {
@@ -142,12 +152,51 @@
       color: #444;
     }
 
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003566;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Form Section */
+    .form-section {
+      display: flex;
+      left: 10%;
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 50px 10%;
+      background-color: #ffffff;
+    }
+
+    .form-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      width: 400px;
+    }
+
+    .form-container h2 {
+      margin: 20px;
+      color: #003566;
+    }
+
+    .form-container label {
+      display: block;
+      margin: 5px;
+      color: #003566;
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .hero-text {
         position: static;
         margin: 20px auto;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         text-align: center;
       }
 
@@ -158,13 +207,20 @@
       }
 
       .card-section {
-        
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         align-items: center;
         padding: 30px 5%;
       }
+
+      .form-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
     }
   </style>
 </head>
+
 <body>
 
   <!-- HERO SECTION -->
@@ -209,7 +265,42 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>ShinChan</h3>
+      <p>I don't know what to add, so i add this as a example</p>
+    </div>
+
+    <div class="card">
+      <h3>MonsterHunter:Wild</h3>
+      <p>It is really a great game, but i don't have enough time to play it</p>
   </section>
 
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <form action="form" method="POST">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required placeholder="name"><br><br>
+        <label for="phone">Your Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required placeholder="phone"><br><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="email"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required
+          placeholder="give us some neccessary message,thanks"></textarea><br><br>
+        <button type="submit">Submmit</button>
+      </form>
+  </section>
+
+  <section>
+    <br><br><br>
+  </section>
 </body>
+
+<footer>
+  <section class="footer">
+    <p>Mercedes© 2025 Programming4</p>
+  </section>
+</footer>
+
 </html>
